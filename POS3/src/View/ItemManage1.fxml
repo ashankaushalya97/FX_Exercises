@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="itemManageFrame" prefHeight="565.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemMangeController">
+    <children>
+        <Label layoutX="230.0" layoutY="28.0" text="Manage Items">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtItemCode" layoutX="43.0" layoutY="87.0" prefHeight="28.0" prefWidth="484.0"
+                      promptText="Item Code"/>
+        <JFXTextField fx:id="txtItemDescription" layoutX="43.0" layoutY="128.0" prefHeight="28.0" prefWidth="484.0"
+                      promptText="Item Description"/>
+        <JFXTextField fx:id="txtQtyOnHand" layoutX="43.0" layoutY="173.0" prefHeight="28.0" prefWidth="484.0"
+                      promptText="Qty on hand"/>
+        <JFXTextField fx:id="txtUnitPrice" layoutX="43.0" layoutY="218.0" prefHeight="28.0" prefWidth="484.0"
+                      promptText="Unit price"/>
+        <JFXButton fx:id="btnSave" layoutX="188.0" layoutY="263.0" onAction="#btnSave_OnAction" prefHeight="22.0"
+                   prefWidth="81.0" style="-fx-background-color: #00BFFF;" text="Save"/>
+        <JFXButton fx:id="btnDelete" layoutX="282.0" layoutY="263.0" onAction="#btnDelete_OnAction" prefHeight="22.0"
+                   prefWidth="81.0" style="-fx-background-color: #FF6969;" text="Delete"/>
+        <TableView fx:id="tableItemDetails" layoutX="43.0" layoutY="304.0" prefHeight="200.0" prefWidth="484.0">
+            <columns>
+                <TableColumn prefWidth="87.0" text="Item Code"/>
+                <TableColumn prefWidth="192.0" text="Item Description"/>
+                <TableColumn prefWidth="98.0" text="Qty on hand"/>
+                <TableColumn prefWidth="106.0" text="Unit Price"/>
+            </columns>
+        </TableView>
+        <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="178.0" layoutY="21.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../img/4.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="icnHome" fitHeight="37.0" fitWidth="40.0" layoutX="269.0" layoutY="514.0"
+                   onMouseClicked="#icnHome_OnAction" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/1.png"/>
+            </image>
+        </ImageView>
+        <JFXButton fx:id="btnNewItem" layoutX="422.0" layoutY="58.0" onAction="#btnNewItem_OnAction" prefHeight="28.0"
+                   prefWidth="96.0" style="-fx-background-color: #00FF7F;" text="+ New Item"/>
+    </children>
+</AnchorPane>

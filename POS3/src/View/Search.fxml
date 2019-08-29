@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="searchPane" prefHeight="526.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchController">
+    <children>
+        <Label layoutX="266.0" layoutY="27.0" text="Search Orders">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtSearch" layoutX="46.0" layoutY="77.0" prefHeight="12.0" prefWidth="506.0"
+                      promptText="Search here..."/>
+        <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="220.0" layoutY="22.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../img/5.png"/>
+            </image>
+        </ImageView>
+        <TableView fx:id="tableResult" layoutX="46.0" layoutY="130.0" onMouseClicked="#tableResult_OnAction"
+                   prefHeight="336.0" prefWidth="506.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="columnDate" prefWidth="99.0" text="Date"/>
+                <TableColumn fx:id="columnTotal" prefWidth="100.0" text="Total"/>
+                <TableColumn fx:id="columnCustomerID" prefWidth="109.0" text="Customer ID"/>
+                <TableColumn fx:id="columnCustomerName" prefWidth="122.0" text="Customer Name"/>
+            </columns>
+        </TableView>
+        <ImageView fx:id="icnHome" fitHeight="36.0" fitWidth="32.0" layoutX="283.0" layoutY="474.0"
+                   onMouseClicked="#icnHome_OnAction" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/1.png"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

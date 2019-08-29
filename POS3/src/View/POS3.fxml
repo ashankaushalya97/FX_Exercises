@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="MngCust" prefHeight="550.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.POS3Controller">
+    <children>
+        <Label layoutX="133.0" layoutY="18.0" text="Manage Customers">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtID" layoutX="40.0" layoutY="99.0" prefHeight="28.0" prefWidth="274.0" promptText="ID"/>
+        <JFXTextField fx:id="txtName" layoutX="40.0" layoutY="140.0" prefHeight="28.0" prefWidth="274.0"
+                      promptText="Name"/>
+        <JFXTextField fx:id="txtAddress" layoutX="40.0" layoutY="187.0" prefHeight="28.0" prefWidth="274.0"
+                      promptText="Address"/>
+        <JFXButton fx:id="btnSave" layoutX="84.0" layoutY="230.0" onAction="#btnSave_OnAction" prefHeight="28.0"
+                   prefWidth="89.0" style="-fx-background-color: #85C1E9;" text="Save"/>
+        <JFXButton fx:id="btnDelete" layoutX="181.0" layoutY="230.0" onAction="#btnDelete_OnAction" prefHeight="28.0"
+                   prefWidth="89.0" style="-fx-background-color: #85C1E9;" text="Delete"/>
+        <TableView fx:id="tableCustomer" layoutX="29.0" layoutY="279.0" onMouseClicked="#tableCustomer_OnClicked"
+                   prefHeight="200.0" prefWidth="290.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="ColumnName" prefWidth="111.0" text="Name"/>
+                <TableColumn fx:id="columnAddress" prefWidth="103.0" text="Address"/>
+            </columns>
+        </TableView>
+        <JFXButton fx:id="btnNew" layoutX="40.0" layoutY="60.0" onAction="#btnNew_OnAction" prefHeight="28.0"
+                   prefWidth="125.0" style="-fx-background-color: #58D68D;" text="+ New Customer"/>
+        <ImageView fx:id="icnHome" fitHeight="36.0" fitWidth="40.0" layoutX="157.0" layoutY="488.0"
+                   onMouseClicked="#icnHome_OnAction" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/1.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="36.0" fitWidth="40.0" layoutX="86.0" layoutY="10.0" onMouseClicked="#icnHome_OnAction"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/3.png"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="ManagerOrders" prefHeight="634.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageOrdersController">
+    <children>
+        <Label layoutX="257.0" layoutY="25.0" text="Manage Orders">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="211.0" layoutY="21.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../img/2.png"/>
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txtOrderID" layoutX="36.0" layoutY="104.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Order ID"/>
+        <JFXTextField fx:id="txtDate" layoutX="312.0" layoutY="104.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Date"/>
+        <JFXTextField fx:id="txtCustomerName" layoutX="312.0" layoutY="155.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Name"/>
+        <JFXComboBox fx:id="comboCustomerID" layoutX="37.0" layoutY="155.0" prefHeight="5.0" prefWidth="241.0"
+                     promptText="Customer ID"/>
+        <Separator layoutX="36.0" layoutY="194.0" prefHeight="22.0" prefWidth="519.0"/>
+        <JFXTextField fx:id="txtItemDesc" layoutX="313.0" layoutY="216.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Description"/>
+        <JFXComboBox fx:id="comboItemCode" layoutX="38.0" layoutY="216.0" prefHeight="5.0" prefWidth="241.0"
+                     promptText="Item Code"/>
+        <JFXTextField fx:id="txtQtyOnHand" layoutX="37.0" layoutY="267.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Qty on Hand"/>
+        <JFXTextField fx:id="txtUnitPrice" layoutX="313.0" layoutY="267.0" prefHeight="28.0" prefWidth="241.0"
+                      promptText="Unit Price"/>
+        <JFXTextField fx:id="txtQty" layoutX="37.0" layoutY="311.0" onAction="#txtQty_OnAction" prefHeight="28.0"
+                      prefWidth="241.0" promptText="Qty"/>
+        <TableView fx:id="tableOrderDetails" layoutX="36.0" layoutY="359.0" prefHeight="200.0" prefWidth="519.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Item Code"/>
+                <TableColumn prefWidth="145.0" text="Item Description"/>
+                <TableColumn prefWidth="65.0" text="Qty"/>
+                <TableColumn prefWidth="97.0" text="Unit Price"/>
+                <TableColumn prefWidth="53.0" text="Total"/>
+                <TableColumn prefWidth="83.0"/>
+            </columns>
+        </TableView>
+        <Label layoutX="36.0" layoutY="584.0" text="Total : " textFill="#eb0000">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="labTotal" layoutX="90.0" layoutY="584.0" text="0" textFill="#eb0000">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="btnPlaceOrder" layoutX="337.0" layoutY="581.0" onAction="#btnPlaceOrder_OnAction"
+                   prefHeight="28.0" prefWidth="216.0" style="-fx-background-color: #00BFFF;" text="Place Order"/>
+        <JFXButton fx:id="btnNewOrder" layoutX="457.0" layoutY="65.0" onAction="#btnNewOrder_OnAction"
+                   style="-fx-background-color: #00FF7F;" text="+ New Order"/>
+        <ImageView fx:id="icnHome" fitHeight="31.0" fitWidth="34.0" layoutX="38.0" layoutY="21.0"
+                   onMouseClicked="#icnHome_OnAction" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/1.png"/>
+            </image>
+        </ImageView>
+        <JFXButton fx:id="btnSave" layoutX="337.0" layoutY="317.0" onAction="#btnSave_OnAction" prefHeight="28.0"
+                   prefWidth="216.0" style="-fx-background-color: #00BFFF;" text="Add to cart"/>
+    </children>
+</AnchorPane>
